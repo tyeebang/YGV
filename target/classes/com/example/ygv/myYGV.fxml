@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ygv.MainController">
+   <children>
+      <ListView layoutX="14.0" layoutY="56.0" prefHeight="330.0" prefWidth="200.0" />
+      <ListView layoutX="228.0" layoutY="56.0" prefHeight="330.0" prefWidth="200.0" />
+      <Label layoutX="88.0" layoutY="20.0" text="예매 목록" />
+      <Label layoutX="288.0" layoutY="20.0" text="시청 영화 목록" />
+      <Label layoutX="433.0" layoutY="20.0" text="제목 : ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="434.0" layoutY="56.0" text="상영 날짜 : ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="434.0" layoutY="93.0" text="상영 시간 : ">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="433.0" layoutY="130.0" text="영화관 위치 :">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Button layoutX="434.0" layoutY="163.0" mnemonicParsing="false" text="영화 정보" />
+      <Button layoutX="447.0" layoutY="363.0" mnemonicParsing="false" text="티켓 판매" />
+      <Button layoutX="523.0" layoutY="363.0" mnemonicParsing="false" text="돌아가기" />
+      <Button layoutX="434.0" layoutY="200.0" mnemonicParsing="false" text="티켓 구입" />
+   </children>
+</AnchorPane>

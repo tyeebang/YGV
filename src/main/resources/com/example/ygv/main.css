@@ -1,0 +1,72 @@
+.tapButton {
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-background-color: #797169;
+    -fx-padding: 8px 55px;
+}
+
+.tapButton:hover {
+    -fx-background-color: #615a54;
+}
+
+.tapButton:selected {
+    -fx-border-width: 3 0 0 0;
+    -fx-border-color: #0096c6;
+}
+
+.movieTap {
+     -fx-border-radius: 4px;
+     -fx-background-radius: 4px;
+     -fx-background-color: #797169;
+     -fx-padding: 6px 42px;
+ }
+
+.movieTap:hover {
+    -fx-background-color: #615a54;
+}
+
+.movieTap:selected {
+    -fx-border-width: 3 0 0 0;
+    -fx-border-color: #0096c6;
+}
+
+.countryTap {
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-background-color: #797169;
+    -fx-padding: 4px 67px;
+}
+
+.countryTap:hover {
+    -fx-background-color: #615a54;
+}
+
+.countryTap:selected {
+    -fx-border-width: 3 0 0 0;
+    -fx-border-color: #0096c6;
+}
+
+.tap {
+    -fx-background-color: #495057;
+    -fx-background-radius: 10px;
+    -fx-border-color: #343a40;
+    -fx-border-radius: 10px;
+}
+
+.back {
+    -fx-background-color: #868e96;
+}
+
+.buttons {
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-background-color: #343a40;
+    -fx-text-fill: #fff;
+    -fx-border-color: #343a40;
+    -fx-padding: 4px 6px;
+}
+
+.buttons:hover {
+    -fx-background-color: #212529;
+    -fx-border-color: #212529;
+}

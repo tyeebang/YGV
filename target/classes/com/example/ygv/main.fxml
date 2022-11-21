@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="back" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ygv.MainController">
+   <children>
+      <Button layoutX="520.0" layoutY="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" styleClass="buttons" text="MyYGV" />
+      <TabPane prefHeight="400.0" prefWidth="500.0" side="BOTTOM" styleClass="tap" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab styleClass="tapButton" text="무비차트">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TabPane prefHeight="355.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab styleClass="movieTap" text="일일 박스오피스">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="326.0" prefWidth="459.0">
+                                       <children>
+                                          <TabPane prefHeight="310.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+                                            <tabs>
+                                              <Tab styleClass="countryTap" text="전체">
+                                                   <content>
+                                                      <AnchorPane prefHeight="280.0" prefWidth="500.0">
+                                                         <children>
+                                                            <ListView prefHeight="280.0" prefWidth="150.0" />
+                                                         </children></AnchorPane>
+                                                   </content>
+                                                </Tab>
+                                              <Tab styleClass="countryTap" text="국내">
+                                                   <content>
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                                                   </content>
+                                                </Tab>
+                                                <Tab styleClass="countryTap" text="해외">
+                                                   <content>
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                                                   </content>
+                                                </Tab>
+                                            </tabs>
+                                          </TabPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                            <Tab styleClass="movieTap" text="주간 박스오피스">
+                              <content>
+                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <TabPane prefHeight="310.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+                                            <tabs>
+                                              <Tab styleClass="countryTap" text="전체">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                </content>
+                                              </Tab>
+                                              <Tab styleClass="countryTap" text="국내">
+                                                <content>
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                </content>
+                                              </Tab>
+                                                <Tab styleClass="countryTap" text="해외">
+                                                   <content>
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                   </content>
+                                                </Tab>
+                                            </tabs>
+                                          </TabPane>
+                                       </children>
+                                    </AnchorPane>
+                              </content>
+                            </Tab>
+                              <Tab styleClass="movieTap" text="검색하기">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab styleClass="tapButton" text="리뷰하기">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+            <Tab styleClass="tapButton" text="예매하기">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="314.0" prefWidth="500.0" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button layoutX="520.0" layoutY="81.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" styleClass="buttons" text="종료" />
+   </children>
+</AnchorPane>
