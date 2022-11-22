@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="back" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ygv.MainController">
    <children>
@@ -27,18 +30,87 @@
                                                    <content>
                                                       <AnchorPane prefHeight="280.0" prefWidth="500.0">
                                                          <children>
-                                                            <ListView prefHeight="280.0" prefWidth="150.0" />
+                                                            <ListView fx:id="dailyAllRank" layoutX="5.0" layoutY="28.0" prefHeight="240.0" prefWidth="50.0" />
+                                                            <ListView fx:id="dailyAllName" layoutX="60.0" layoutY="28.0" prefHeight="240.0" prefWidth="200.0" />
+                                                            <ListView fx:id="dailyAllDt" layoutX="265.0" layoutY="28.0" prefHeight="240.0" prefWidth="90.0" />
+                                                            <ListView fx:id="dailyAllCnt" layoutX="360.0" layoutY="28.0" prefHeight="240.0" prefWidth="65.0" />
+                                                            <ListView fx:id="dailyAllAcc" layoutX="430.0" layoutY="28.0" prefHeight="240.0" prefWidth="65.0" />
+                                                            <Label layoutX="12.0" layoutY="4.0" text="순위" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="142.0" layoutY="4.0" text="제목" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="283.0" layoutY="4.0" text="개봉일" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="361.0" layoutY="7.0" text="일일 관객수" textFill="WHITE" />
+                                                            <Label layoutX="431.0" layoutY="7.0" text="누적 관객수" textFill="WHITE" />
                                                          </children></AnchorPane>
                                                    </content>
                                                 </Tab>
                                               <Tab styleClass="countryTap" text="국내">
                                                    <content>
-                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                         <children>
+                                                            <ListView fx:id="dailyDomesticRank" layoutX="5.0" layoutY="28.0" prefHeight="240.0" prefWidth="50.0" />
+                                                            <ListView fx:id="dailyDomesticName" layoutX="60.0" layoutY="28.0" prefHeight="240.0" prefWidth="200.0" />
+                                                            <ListView fx:id="dailyDomesticDt" layoutX="265.0" layoutY="28.0" prefHeight="240.0" prefWidth="90.0" />
+                                                            <ListView fx:id="dailyDomesticCnt" layoutX="360.0" layoutY="28.0" prefHeight="240.0" prefWidth="65.0" />
+                                                            <ListView fx:id="dailyDomesticAcc" layoutX="430.0" layoutY="28.0" prefHeight="240.0" prefWidth="65.0" />
+                                                            <Label layoutX="12.0" layoutY="4.0" text="순위" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="142.0" layoutY="4.0" text="제목" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="283.0" layoutY="4.0" text="개봉일" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="361.0" layoutY="7.0" text="일일 관객수" textFill="WHITE" />
+                                                            <Label layoutX="431.0" layoutY="7.0" text="누적 관객수" textFill="WHITE" />
+                                                         </children></AnchorPane>
                                                    </content>
                                                 </Tab>
                                                 <Tab styleClass="countryTap" text="해외">
                                                    <content>
-                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                                                      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                         <children>
+                                                            <ListView fx:id="dailyOverseasRank" layoutX="5.0" layoutY="28.0" prefHeight="240.0" prefWidth="50.0" />
+                                                            <ListView fx:id="dailyOverseasName" layoutX="60.0" layoutY="28.0" prefHeight="240.0" prefWidth="200.0" />
+                                                            <ListView fx:id="dailyOverseasDt" layoutX="265.0" layoutY="28.0" prefHeight="240.0" prefWidth="90.0" />
+                                                            <ListView fx:id="dailyOverseasCnt" layoutX="360.0" layoutY="28.0" prefHeight="240.0" prefWidth="65.0" />
+                                                            <ListView fx:id="dailyOverseasAcc" layoutX="430.0" layoutY="28.0" prefHeight="240.0" prefWidth="65.0" />
+                                                            <Label layoutX="12.0" layoutY="4.0" text="순위" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="142.0" layoutY="4.0" text="제목" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="283.0" layoutY="4.0" text="개봉일" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="361.0" layoutY="7.0" text="일일 관객수" textFill="WHITE" />
+                                                            <Label layoutX="431.0" layoutY="7.0" text="누적 관객수" textFill="WHITE" />
+                                                         </children></AnchorPane>
                                                    </content>
                                                 </Tab>
                                             </tabs>
@@ -55,17 +127,89 @@
                                             <tabs>
                                               <Tab styleClass="countryTap" text="전체">
                                                 <content>
-                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label layoutX="12.0" layoutY="4.0" text="순위" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="142.0" layoutY="4.0" text="제목" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="283.0" layoutY="4.0" text="개봉일" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="361.0" layoutY="7.0" text="주간 관객수" textFill="WHITE" />
+                                                            <Label layoutX="431.0" layoutY="7.0" text="누적 관객수" textFill="WHITE" />
+                                                            <ListView fx:id="weeklyAllRank" layoutX="5.0" layoutY="28.0" prefHeight="240.0" prefWidth="50.0" />
+                                                            <ListView fx:id="weeklyAllName" layoutX="60.0" layoutY="28.0" prefHeight="240.0" prefWidth="200.0" />
+                                                            <ListView fx:id="weeklyAllDt" layoutX="265.0" layoutY="28.0" prefHeight="240.0" prefWidth="90.0" />
+                                                            <ListView fx:id="weeklyAllCnt" layoutX="360.0" layoutY="28.0" prefHeight="240.0" prefWidth="65.0" />
+                                                            <ListView fx:id="weeklyAllAcc" layoutX="430.0" layoutY="28.0" prefHeight="240.0" prefWidth="65.0" />
+                                                         </children></AnchorPane>
                                                 </content>
                                               </Tab>
                                               <Tab styleClass="countryTap" text="국내">
                                                 <content>
-                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <ListView fx:id="weeklyDomesticRank" layoutX="5.0" layoutY="28.0" prefHeight="240.0" prefWidth="50.0" />
+                                                            <ListView fx:id="weeklyDomesticName" layoutX="60.0" layoutY="28.0" prefHeight="240.0" prefWidth="200.0" />
+                                                            <ListView fx:id="weeklyDomesticDt" layoutX="265.0" layoutY="28.0" prefHeight="240.0" prefWidth="90.0" />
+                                                            <ListView fx:id="weeklyDomesticCnt" layoutX="360.0" layoutY="28.0" prefHeight="240.0" prefWidth="65.0" />
+                                                            <ListView fx:id="weeklyDomesticAcc" layoutX="430.0" layoutY="28.0" prefHeight="240.0" prefWidth="65.0" />
+                                                            <Label layoutX="12.0" layoutY="4.0" text="순위" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="142.0" layoutY="4.0" text="제목" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="283.0" layoutY="4.0" text="개봉일" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="361.0" layoutY="7.0" text="주간 관객수" textFill="WHITE" />
+                                                            <Label layoutX="431.0" layoutY="7.0" text="누적 관객수" textFill="WHITE" />
+                                                         </children></AnchorPane>
                                                 </content>
                                               </Tab>
                                                 <Tab styleClass="countryTap" text="해외">
                                                    <content>
-                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                         <children>
+                                                            <ListView fx:id="weeklyOverseasRank" layoutX="5.0" layoutY="28.0" prefHeight="240.0" prefWidth="50.0" />
+                                                            <ListView fx:id="weeklyOverseasName" layoutX="60.0" layoutY="28.0" prefHeight="240.0" prefWidth="200.0" />
+                                                            <ListView fx:id="weeklyOverseasDt" layoutX="265.0" layoutY="28.0" prefHeight="240.0" prefWidth="90.0" />
+                                                            <ListView fx:id="weeklyOverseasCnt" layoutX="360.0" layoutY="28.0" prefHeight="240.0" prefWidth="65.0" />
+                                                            <ListView fx:id="weeklyOverseasAcc" layoutX="430.0" layoutY="28.0" prefHeight="240.0" prefWidth="65.0" />
+                                                            <Label layoutX="12.0" layoutY="4.0" text="순위" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="142.0" layoutY="4.0" text="제목" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="283.0" layoutY="4.0" text="개봉일" textFill="WHITE">
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label layoutX="361.0" layoutY="7.0" text="주간 관객수" textFill="WHITE" />
+                                                            <Label layoutX="431.0" layoutY="7.0" text="누적 관객수" textFill="WHITE" />
+                                                         </children></AnchorPane>
                                                    </content>
                                                 </Tab>
                                             </tabs>
@@ -76,7 +220,18 @@
                             </Tab>
                               <Tab styleClass="movieTap" text="검색하기">
                                  <content>
-                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <ListView layoutX="19.0" layoutY="100.0" prefHeight="200.0" prefWidth="85.0" />
+                                          <ListView layoutX="114.0" layoutY="100.0" prefHeight="200.0" prefWidth="85.0" />
+                                          <ListView layoutX="208.0" layoutY="100.0" prefHeight="200.0" prefWidth="85.0" />
+                                          <ListView layoutX="300.0" layoutY="100.0" prefHeight="200.0" prefWidth="85.0" />
+                                          <ListView layoutX="393.0" layoutY="100.0" prefHeight="200.0" prefWidth="85.0" />
+                                          <TextField layoutX="19.0" layoutY="14.0" promptText="영화명 입력" />
+                                          <TextField layoutX="200.0" layoutY="14.0" promptText="감독명 입력" />
+                                          <Button layoutX="393.0" layoutY="14.0" mnemonicParsing="false" text="Button" />
+                                          <Label layoutX="14.0" layoutY="46.0" text="영화명 입력란 및 감독명 입력란 중 한 곳엔 값이 필요" textFill="WHITE" />
+                                       </children></AnchorPane>
                                  </content>
                               </Tab>
                           </tabs>
