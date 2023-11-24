@@ -70,3 +70,8 @@
     -fx-background-color: #212529;
     -fx-border-color: #212529;
 }
+
+.mPane {
+    -fx-background-image: url("F.png");
+    -fx-background-size: cover;
+}

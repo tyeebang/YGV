@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.Tab?>
@@ -11,7 +13,6 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="back" stylesheets="@main.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.ygv.MainController">
    <children>
-      <Button layoutX="520.0" layoutY="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" styleClass="buttons" text="MyYGV" />
       <TabPane prefHeight="400.0" prefWidth="500.0" side="BOTTOM" styleClass="tap" tabClosingPolicy="UNAVAILABLE">
         <tabs>
           <Tab styleClass="tapButton" text="무비차트">
@@ -222,15 +223,43 @@
                                  <content>
                                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                                        <children>
-                                          <ListView layoutX="19.0" layoutY="100.0" prefHeight="200.0" prefWidth="85.0" />
-                                          <ListView layoutX="114.0" layoutY="100.0" prefHeight="200.0" prefWidth="85.0" />
-                                          <ListView layoutX="208.0" layoutY="100.0" prefHeight="200.0" prefWidth="85.0" />
-                                          <ListView layoutX="300.0" layoutY="100.0" prefHeight="200.0" prefWidth="85.0" />
-                                          <ListView layoutX="393.0" layoutY="100.0" prefHeight="200.0" prefWidth="85.0" />
-                                          <TextField layoutX="19.0" layoutY="14.0" promptText="영화명 입력" />
-                                          <TextField layoutX="200.0" layoutY="14.0" promptText="감독명 입력" />
-                                          <Button layoutX="393.0" layoutY="14.0" mnemonicParsing="false" text="Button" />
+                                          <ListView fx:id="searchName" layoutX="4.0" layoutY="100.0" prefHeight="200.0" prefWidth="150.0" />
+                                          <ListView fx:id="searchOpenDt" layoutX="157.0" layoutY="100.0" prefHeight="200.0" prefWidth="80.0" />
+                                          <ListView fx:id="searchRepNationNm" layoutX="240.0" layoutY="100.0" prefHeight="200.0" prefWidth="75.0" />
+                                          <ListView fx:id="searchRepGenreNm" layoutX="318.0" layoutY="100.0" prefHeight="200.0" prefWidth="75.0" />
+                                          <ListView fx:id="searchPeopleNm" layoutX="396.0" layoutY="100.0" prefHeight="200.0" prefWidth="100.0" />
+                                          <TextField fx:id="movieNmText" layoutX="19.0" layoutY="14.0" promptText="영화명 입력" />
+                                          <TextField fx:id="directorNmText" layoutX="200.0" layoutY="14.0" promptText="감독명 입력" />
+                                          <Button fx:id="searchBut" layoutX="416.0" layoutY="14.0" mnemonicParsing="false" onAction="#searchMovie" styleClass="buttons" text="검색">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor></Button>
                                           <Label layoutX="14.0" layoutY="46.0" text="영화명 입력란 및 감독명 입력란 중 한 곳엔 값이 필요" textFill="WHITE" />
+                                          <Label layoutX="61.0" layoutY="70.0" text="제목" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="170.0" layoutY="70.0" text="개봉일" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="242.0" layoutY="70.0" text="제작국가" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="338.0" layoutY="70.0" text="장르" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="428.0" layoutY="70.0" text="감독" textFill="WHITE">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
                                        </children></AnchorPane>
                                  </content>
                               </Tab>
@@ -240,18 +269,39 @@
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab styleClass="tapButton" text="리뷰하기">
+          <Tab styleClass="tapButton" text="예매하기">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="255.0" layoutY="5.0" mnemonicParsing="false" onAction="#ticketing" styleClass="buttons" text="예매하기" />
+                        <ListView fx:id="tickets" layoutX="15.0" layoutY="68.0" prefHeight="270.0" prefWidth="225.0" />
+                        <Label layoutX="89.0" layoutY="7.0" text="영화 목록" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="picker" layoutX="15.0" layoutY="36.0" prefHeight="22.0" prefWidth="225.0" />
+                        <ListView fx:id="myTicketsTitle" layoutX="249.0" layoutY="68.0" prefHeight="270.0" prefWidth="148.0" />
+                        <Label layoutX="327.0" layoutY="35.0" text="제목 / 날짜" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button layoutX="255.0" layoutY="36.0" mnemonicParsing="false" onAction="#deleteTicket" styleClass="buttons" text="판매하기" />
+                        <ListView fx:id="myTicketsDate" layoutX="405.0" layoutY="68.0" prefHeight="270.0" prefWidth="85.0" />
+                        <Label layoutX="322.0" layoutY="7.0" text="내 영화 목록" textFill="WHITE">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
             </content>
           </Tab>
-            <Tab styleClass="tapButton" text="예매하기">
-               <content>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="314.0" prefWidth="500.0" />
-               </content>
-            </Tab>
         </tabs>
       </TabPane>
-      <Button layoutX="520.0" layoutY="81.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" styleClass="buttons" text="종료" />
+      <Button fx:id="mainCloseBtn" layoutX="520.0" layoutY="350.0" mnemonicParsing="false" onAction="#mainClose" prefHeight="25.0" prefWidth="60.0" styleClass="buttons" text="종료">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
    </children>
 </AnchorPane>

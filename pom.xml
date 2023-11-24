@@ -67,7 +67,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.example.ygv/com.example.ygv.HelloApplication</mainClass>
+                            <mainClass>com.example.ygv/com.example.ygv.RunApp</mainClass>
                         </configuration>
                     </execution>
                 </executions>
