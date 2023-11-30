@@ -44,7 +44,6 @@ public class MainController implements Initializable {
 
             Document doc = Jsoup.connect("https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/" +
                     "searchDailyBoxOfficeList.xml?key=2645c4c158a30cc3f6c9c33681d5122c&targetDt=" + yesterday).get();
-
             for (int i = 1; i <= 10; i++) {
                 Elements locList = doc.select("dailyBoxOffice:nth-child(" + i + ")");
 
@@ -320,7 +319,7 @@ public class MainController implements Initializable {
             Document doc = Jsoup.connect(url).get();
 
             Elements locList = doc.select("div.sect-movie-chart");
-
+            System.out.println(doc);
             System.out.println("============================================================");
 
             Iterator<Element> it = locList.select("strong.title").iterator();
